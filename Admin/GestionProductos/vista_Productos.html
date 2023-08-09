@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="../Styles/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../Styles/gestionProductosStyles.css">
+</head>
+<body>
+   
+    <nav class="navbar navbar-expand-lg navbar-light   fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html"><span class="">CENTRAL</span></a>
+        
+          <div class="navbar-collapse justify-content-center " id="navbarSupportedContent">
+            <ul class="navbar-nav mb-lg-0 justify-content-center"> 
+              
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="../GestionSucursal/vista_Sucursal.html">
+                       <i class="fa-solid fa-city"></i>
+                      Sucursales
+                    </a>
+                  </li>
+              <li class="nav-item marcar">
+                <a class="nav-link marcar text-white" href="" >
+                    <i class="fa-solid fa-pills"></i>
+                    Productos/Medicamentos
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="../GestionPedidosCompras/vista_PedidosCompra.html"  >
+                    <i class="fa-solid fa-window-restore"></i>
+                    Pedidios de compra
+                </a>
+            </li>
+            
+                             <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle  text-white"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fa-solid fa-user"></i>Administrador
+          </a>
+          <ul class="dropdown-menu "  >
+            <li> <a class="dropdown-item   "  href="#"> Configuracion</a></li>
+            <li><a class="dropdown-item text-danger" href="../../index.html">Cerrar Sesion</a></li>
+           
+          </ul>
+        </li>
+            </ul>
+          </div>
+       
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"  ></span>
+          </button>
+        </div>
+      </nav>
+      <br><br><br>
+      <div class="texto farmacia-texto"  >  <h1 class="text-center ">Gestion Medicamentos</h1></div>
+     
+      <div class="container">
+        <div class="row">
+         
+          <!-- Primera columna -->
+          <div class="col-md-4 d-flex flex-column justify-content-center">
+         
+            <form class="text-start">
+              <div class="mb-3 spam">
+               <label for="input11">Nombre del medicamento</label>
+                <input type="text" id="txtnomProd" class="form-control" placeholder="Nombre del medicamento">
+                      <span><i class="fa-solid fa-prescription"></i></span>
+              </div>
+              <div class="mb-3  spam">
+                <label for="input12">Nombre genérico</label>
+                <input type="text" id="txtnomGen" class="form-control" placeholder="Nombre genérico">
+                   <span><i class="fa-solid fa-file-prescription"></i></span>
+              </div>
+              <div class="mb-3  spam">
+                <label for="input13">Forma farmacéutica</label>
+                <input type="text" id="txtformfarm" class="form-control" placeholder="Forma farmacéutica">
+                   <span><i class="fa-solid fa-pills"></i></span>
+              </div>
+              <div class="mb-3  spam">
+                <label for="input21">Unidad de medida</label>
+                <input type="text" id="txtundme" class="form-control" placeholder="Unidad de medida">
+                   <span><i class="fa-solid fa-prescription-bottle"></i></span>
+              </div>
+       
+            </form>
+          </div>
+          <br><br>
+          <!-- Segunda columna -->
+          <div class="col-md-4 d-flex flex-column justify-content-center">
+          
+            <form class="text-start">
+              <div class="mb-3  spam">
+                <label for="input21">Contraindicaciones</label>
+                <input type="text" id="txtcontra" class="form-control" placeholder="Contraindicaciones">
+                   <span><i class="fa-solid fa-triangle-exclamation"></i></span>
+              </div>
+              <div class="mb-3  spam">
+                <label for="input22">Presentación</label>
+                <input type="text" id="txtpres" class="form-control" placeholder="Presentación">
+                   <span><i class="fa-solid fa-kit-medical"></i></span>
+              </div>
+              <div class="mb-3  spam">
+                <label for="input23">Principal indicación</label>
+                <input type="text" id="txtpriind" class="form-control" placeholder="Principal indicación">
+                   <span><i class="fa-solid fa-square-plus"></i></i></span>
+              </div>
+              <div class="mb-3  spam">
+                <label for="input32">Concentracion</label>
+                <input type="text" id="txtconcen" class="form-control" placeholder="Concentracion">
+                   <span><i class="fa-solid fa-syringe"></i></span>
+              </div>
+          
+            </form>
+          </div>
+    
+          <!-- Tercera columna -->
+          <div class="col-md-4 d-flex flex-column justify-content-center">
+            <h5> Imagen </h5>
+            <img src="img/nada.jpg"  id="txtFoto"  name="txtFoto" class="rounded" alt="..." width="150">
+              <div class="mb-3  spam">
+                <label for="input32">Selecciona la fotografía del medicamento </label>
+                <input type="file" id="archivo" class="form-control1" placeholder="Longitud" accept=".jpg,.jpeg,.png" required onchange="despliegaFoto(this.value);">
+                  
+              </div>
+              <div class="mb-3">
+               
+              </div>
+              <div class="mb-3  spam">
+                <label for="input33">Código de barras</label>
+                <input type="text" id="txtcodebar" class="form-control" placeholder="Código de barras">
+                   <span><i class="fa-solid fa-barcode"></i></span>
+              </div>
+             
+           
+          </div>
+
+          <div class="col-md-4 d-flex flex-column justify-content-center">
+            <form class="text-start">
+              
+              <div class="mb-3  spam">
+                <label for="input32">Unidades en envase</label>
+                <input type="text" id="txtunenva" class="form-control" placeholder="Unidades en envase">
+                   <span><i class="fa-solid fa-prescription-bottle-medical"></i></span>
+              </div>
+     
+            </form>
+          </div>
+          <div class="col-md-4 d-flex flex-column justify-content-center">
+            <form class="text-start">
+              
+              <div class="mb-3  spam">
+                <label for="input32">Precio por unidad
+                </label>
+                <input type="text" id="txtprecio" class="form-control" placeholder="Precio por unidad">
+                   <span><i class="fa-solid fa-dollar-sign"></i></span>
+              </div>
+             
+             
+              
+            </form>
+          </div>
+          
+        </div>
+        
+          
+          <div class="row">
+            <div class="d-flex justify-content-center mt-4">
+              <!-- Agregar botón "Agregar" -->
+              <button class="ov-btn-slide-right  mx-2 button-1 " id="btnAgregar" onclick="agregarProducto2();">Agregar</button>
+              <button class="ov-btn-slide-right  mx-2 button-2 " id="btnEliminar" onclick="eliminarProducto();">Eliminar</button>
+              <button class="ov-btn-slide-right  mx-2 button-3 " id="btnModificar"onclick="modificaProducto();">Modificar</button>
+              <button class="ov-btn-slide-right  mx-2 button-4" id="btnLimpiar" onclick="limpiar();">Limpiar </button>
+      
+      
+      
+            </div>
+          </div>
+          
+            <div class="row mt-4">
+                <div class="col-sm-12">
+                    <!-- Agregar formulario de búsqueda -->
+                    <nav class="navbar navbar1 navbar-light">
+                      <div class="container-fluid">
+                        <form class="d-flex" role="search">
+                          <input class="form-control form-control-sm me-2" type="search" placeholder="Buscar" aria-label="Buscar" id="txtBusquedaProducto">
+                          <button class="btn btn-outline-success btn-sm" type="button"  onclick="searchProducto();">Buscar</button>
+                        </form>
+                      </div>
+                    </nav>
+                </div>
+            </div>
+        <div class="row mt-4">
+            <div class="col-sm-12">
+                <h5 class="list">Lista de productos</h5>
+                <div class="table-responsive">
+                    <table class="table  ">
+                        <thead>
+                            <tr class="encabezado">
+                                <th scope="col">Id</th>
+                            <th scope="col">Nombre del producto</th>
+                         
+                            <th scope="col">Forma farmacéutica</th>
+                         
+                            <th scope="col">Presentación</th>
+                            <th scope="col">Principal indicación</th>
+                        
+                            <th scope="col">Concentración</th>
+                           
+                            <th scope="col">Precio</th>
+                            <th scope="col">foto</th>
+                            <th scope="col">Ruta de la foto</th>
+                            <th scope="col">Código de barras</th>
+                            <th scope="col">Estatus</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tblProductos"  class="" >
+                           
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div> 
+        
+      </div>
+      <footer class="text-center text-white" style="background-color: #f1f1f1;">
+        <!-- Grid container -->
+        <div class="container-1 mx-auto">
+            <!-- Section: Social media -->
+            <section class="mb-4 d-flex align-items-center justify-content-center">
+              <!-- Facebook -->
+              <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+              data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+
+          <!-- Twitter -->
+          <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+              data-mdb-ripple-color="dark"><i class="fa-brands fa-whatsapp"></i></a>
+
+          <!-- Google -->
+          
+
+          <!-- Instagram -->
+          <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+              data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+    
+                <!-- Imagen del logo junto a los iconos -->
+                <img src="img/Black___White_Minimalist_Business_Logo-removebg-preview.png"
+                    alt="Logo" width="150px" class="ml-3">
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+    
+        <div class="text-center text-dark container-2" style="background-color: rgba(0, 0, 0, 0.2);">
+            <br>
+            © 2023 Copyright: CodeFour
+        </div>
+        <!-- Copyright -->
+    </footer>
+     
+      
+ 
+     
+      <script src="../GestionProductos/controlador_Productos.js "></script>
+      <script src="../Styles/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
+</body>
+</html>
+
+<!--for getting the form download the code from download button-->

@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+* {
+	font-family: 'Montserrat', sans-serif;
+}
+
+
+  /* Estilo para dar color al fondo de la pagina */
+body{
+	background-color: #ffff;
+}
+
+  /* Estilo para dar color al fondo al barra de navegacion navbar */
+.navbar{
+
+	background-color: #2C3E50;
+}
+/* Estilo para dar color al fondo al input de busqueda  */
+.navbar1{
+	
+	background-color: #ffff!important;
+}
+/* Estilos a los botones de enlace ded navbar */
+.navbar-nav a {
+	font-size: 15px;
+	text-transform: uppercase;
+	font-weight: 500;
+	margin-right: 30px;
+	 
+	
+}
+/* Estilo para cambiar de color al cuadro cuando  se hace responsivo */
+.navbar-toggler{
+	background-color: white;
+}
+
+/* Estilo para para la barra de navegacion navbar */
+.navbar-light .navbar-brand {
+	
+	font-size: 25px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+/* Estilo para poner el border de color verde al enlace en el cual estamos */
+.nav-link.marcar {
+	border-bottom: 3px solid  #2ebd94;
+  }
+  
+  /* Estilo para poner el border de color verde a los enlaces cuando pasas el cursor */
+.navbar-nav .nav-link:hover {
+  
+	border-bottom: 3px solid  #2ebd94;
+	
+  }
+   /* Estilo para poner el  color al titulo que hace referencia al nombre central o sucursal en la barra de navegacion*/
+span{
+	color: #2ebd94;
+}
+
+
+   /* Estilo para  darle al texto principal */
+.farmacia-texto {
+    text-transform: uppercase;
+  font-family: 'Arial', sans-serif;
+  font-size: 48px;
+  color: #2C3E50;
+  text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo para el nombre de los input  */
+label{
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 20px;
+color: #2C3E50 !important;
+  }
+  
+/* Estilo para los input */  
+input.form-control {
+    background: transparent;
+    border:none;
+    outline: none;
+    border-bottom: 2px solid #2ebd94;
+   	
+  }
+  
+  /* Estilo para los input  */  
+input::placeholder {
+	color: rgba(10, 7, 7, 0.336) !important; /* Establecer el color del placeholder en blanco */
+  }
+  
+
+/* Estilo para darle margen al placeholder  */    
+.form-control {
+  padding-left: 37px;
+}
+
+
+/* Estilo de margen  para  los iconos  */   
+i{
+	margin-right: 5px;
+}
+
+/* Estilo para poner la posicion relativa al spam   */  
+.spam {
+  position: relative;
+}
+
+/* Estilo  a los iconos  */  
+.spam i {
+  position: absolute;
+  left: 8px;
+  top: 60%;
+  color: #2C3E50;
+  font-size: 16px;
+  pointer-events: none;
+}
+/* Estilo  alos input que son select   */  
+  .form-select {
+  width: 350px; /* Ancho del select */
+  padding: 10px; /* Espaciado interno */
+  font-size: 16px; /* Tamaño de fuente */
+  background: transparent; /* Fondo transparente */
+  border: none; /* Sin borde */
+  outline: none; /* Sin contorno al hacer click */
+  border-bottom: 2px solid #2ebd94; /* Borde inferior de 2px sólido de color #2ebd94 */
+  border-radius: 0; /* Radio de esquinas */
+}
+
+/* Estilo  alos input que son select   */  
+.selecto{
+	border-radius: 10px;
+}
+
+/* Estilo  a los botones   */  
+.button { 
+    border-radius: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 9px #999;
+}
+
+/* animacion  a los botones  */  
+.button:active {
+  
+  box-shadow: 0 10px #666;
+  transform: translateY(4px);
+}
+
+  /* Estilo para la tabla */
+.table {
+  width: 100%;
+
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+/* Estilo para las celdas encabezado */
+.encabezado th {
+  background-color: #2C3E50;
+  color: #fff;
+  font-weight: bold;
+  padding: 12px 8px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ /* Animacion para las celdas encabezado */
+.table tbody tr:hover {
+  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ border-bottom: 4px solid  #2ebd94;
+  transition: background-color 0.8s ease;
+}
+
+
+
+
+
+/* Estilo para las filas impares */
+.table tbody tr:nth-child(even) {
+
+  background-color: #3537392c;
+
+  color: rgb(18, 17, 17);
+
+}
+
+ 
+
