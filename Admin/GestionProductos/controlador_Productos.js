@@ -174,7 +174,8 @@
          precio= document.getElementById("txtprecio").value;
          archivo= document.getElementById("archivo").value;
          codebar= document.getElementById("txtcodebar").value;
-        
+         foto= obtenerNombreFoto();
+        rutfoto = document.getElementById("archivo").value;
         let newProd = {};
         newProd.nomProd = nomProd,
         newProd.nomGen = nomGen,
@@ -182,6 +183,7 @@
         newProd.undme = undme,
         newProd.pres = pres,
         newProd.priind = priind,
+          newProd.foto= foto,
         newProd.contra = contra,
         newProd.concen = concen,
         newProd.unenva = unenva,
